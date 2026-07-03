@@ -4,7 +4,7 @@
 > 
 > AI-Toolkit-Easy2use项目作者：DocWorkBox
 > 
-> 本项目是基于[（I卡）AI-Toolkit安装教程｜ARC.AI.Next｜腾讯频道](https://pd.qq.com/g/mojr1c1n4v/post/B_6f843f69d1e10a001441152196989399570X60)  （停止更新） 进行二次开发。
+> 本项目是基于[（I卡）AI-Toolkit安装教程｜ARC.AI.Next｜腾讯频道](https://pd.qq.com/g/mojr1c1n4v/post/B_6f843f69d1e10a001441152196989399570X60)  进行二次开发。
 
 ## 特别说明
 - 项目是利用AI开发服务于intel显卡，其他类型显卡暂不支持。
