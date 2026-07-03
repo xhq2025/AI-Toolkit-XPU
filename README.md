@@ -9,7 +9,7 @@
 ## 特别说明
 - 项目是利用AI开发服务于intel显卡，其他类型显卡暂不支持。
 - 测试设备：Arc A770 16G + i5-11600KF + 32G内存
-- 原有支持项
+### 原有支持项
 - lodestones/Chroma1-Base
 - ostris/Flex.1-alpha
 - ostris/Flex.2-preview
@@ -36,7 +36,7 @@
 - ai-toolkit/Wan2.2-I2V-A14B-Diffusers-bf16
 - Wan-AI/Wan2.2-TI2V-5B-Diffusers
   
-- 以下是在原有的基础上新增的支持
+### 以下是在原有的基础上新增的支持
 - Flux.2-klein-base-4B
 
 ## 项目简介
