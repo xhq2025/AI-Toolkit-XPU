@@ -8,7 +8,7 @@
 
 ## 特别说明
 - 项目是利用AI开发服务于intel显卡，其他类型显卡暂不支持。
-- 测试设备：Arc A770 16G + i5-11600KF + 32G内存
+- 测试设备：Arc A770 16G + 32G内存
 ### 原有支持项
 - lodestones/Chroma1-Base
 - ostris/Flex.1-alpha
