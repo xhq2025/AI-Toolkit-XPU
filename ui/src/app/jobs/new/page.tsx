@@ -240,10 +240,7 @@ export default function TrainingForm() {
                   }
                   setJobConfig(value, 'config.process[0].type');
                 }}
-                options={[
-  { value: 'diffusion_trainer', label: 'LoRA Trainer' },
-  { value: 'concept_slider', label: 'Concept Slider' },
-]}
+              options={jobTypeOptions}
               />
             </div>
             <div className="mx-4 bg-gray-200 dark:bg-gray-800 w-1 h-6 hidden sm:block"></div>
