@@ -40,6 +40,8 @@
 ### 在原有的基础上新增的支持
 - Flux.2-klein-base-4B
 - Flux.2-klein-base-9B(未测试)
+- Boogu Image Edit(未测试)
+- Boogu Image(未测试)
 
 ## 项目简介
 
