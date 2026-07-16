@@ -8,6 +8,8 @@ from .qwen_image import QwenImageModel, QwenImageEditModel, QwenImageEditPlusMod
 from .flux2 import Flux2Model, Flux2Klein4BModel, Flux2Klein9BModel
 from .z_image import ZImageModel
 from .boogu_image import BooguImageModel, BooguImageEditModel
+from .anima import AnimaModel
+
 
 AI_TOOLKIT_MODELS = [
     # put a list of models here
@@ -27,6 +29,7 @@ AI_TOOLKIT_MODELS = [
     Flux2Model,
     Flux2Klein4BModel,
     ZImageModel,
+    AnimaModel,
     BooguImageModel,
     BooguImageEditModel,
 ]
