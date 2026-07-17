@@ -260,6 +260,20 @@ class AnimaModel(BaseModel):
         if os.path.isdir(model_path):
             load_kwargs["pretrained_model_name_or_path"] = model_path
         pipe.load_components(**load_kwargs)
+        # 如果 tokenizer 未被 load_components 加载，则手动加载
+        if pipe.tokenizer is None:
+            from transformers import AutoTokenizer
+            pipe.tokenizer = AutoTokenizer.from_pretrained(
+                model_path, subfolder="tokenizer", trust_remote_code=True
+            )
+        if not hasattr(pipe, 't5_tokenizer') or pipe.t5_tokenizer is None:
+            from transformers import T5TokenizerFast
+            # 修复 extra_special_tokens 格式问题：config 中是 list，但 transformers 期望 dict
+            pipe.t5_tokenizer = T5TokenizerFast.from_pretrained(
+                model_path, subfolder="t5_tokenizer", legacy=False,
+                extra_special_tokens={}
+            )
+
         pipe.update_components(scheduler=self.get_train_scheduler())
 
         transformer = pipe.transformer
