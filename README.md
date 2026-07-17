@@ -10,38 +10,6 @@
 - 项目用于intel显卡，其他类型显卡暂不支持。
 - 测试设备：Arc A770 16G + 32G内存
 
-### 原有支持项
-- lodestones/Chroma1-Base
-- ostris/Flex.1-alpha
-- ostris/Flex.2-preview
-- black-forest-labs/FLUX.1-dev
-- black-forest-labs/FLUX.2-dev
-- HiDream-ai/HiDream-I1-Full
-- Alpha-VLLM/Lumina-Image-2.0
-- OmniGen2/OmniGen2
-- Qwen/Qwen-Image
-- stable-diffusion-v1-5/stable-diffusion-v1-5
-- stabilityai/stable-diffusion-xl-base-1.0
-- Tongyi-MAI/Z-Image-Turbo
-
-- black-forest-labs/FLUX.1-Kontext-dev
-- HiDream-ai/HiDream-E1-1
-- Qwen/Qwen-Image-Edit
-- Qwen/Qwen-Image-Edit-2509
-
-- Wan-AI/Wan2.1-T2V-1.3B-Diffusers
-- Wan-AI/Wan2.1-T2V-14B-Diffusers
-- Wan-AI/Wan2.1-I2V-14B-480P-Diffusers
-- Wan-AI/Wan2.1-I2V-14B-720P-Diffusers
-- ai-toolkit/Wan2.2-I2V-A14B-Diffusers-bf16
-- ai-toolkit/Wan2.2-I2V-A14B-Diffusers-bf16
-- Wan-AI/Wan2.2-TI2V-5B-Diffusers
-
-### 在原有的基础上新增的支持
-- Flux.2-klein-base-4B
-- Flux.2-klein-base-9B(未测试)
-- Boogu Image Edit(未测试)
-- Boogu Image(未测试)
 
 ## 项目简介
 
@@ -89,63 +57,5 @@ python -m venv venv
 ```bash
 pip install -r requirements.txt
 ```
-
-
-## 运行 UI（中文界面）
-
-### 环境要求
-
-- Node.js ≥ 18
-
-UI 为基于 Next.js 的 Web 应用。UI 无需持续运行即可执行训练任务，仅在启动/停止/监控任务时需要使用。
-
-### 开发模式
-
-开发模式运行在 `http://localhost:3000`：
-
-```bash
-cd ui
-npm install
-npm run dev
-```
-
-打开浏览器访问：
-
-- `http://localhost:3000/`（首页）
-- `http://localhost:3000/dashboard`（仪表盘）
-- `http://localhost:3000/jobs/new`（新建任务）
-
-### 生产环境
-
-生产环境运行在端口 `8675`。以下命令将安装/更新 UI 及其依赖并启动 UI：
-
-```bash
-cd ui
-npm run build_and_start
-```
-
-启动后可通过以下地址访问：
-
-- `http://localhost:8675`（本地访问）
-- `http://<your-ip>:8675`（服务器部署时的远程访问）
-
-> **注意**：UI 无需持续运行即可执行训练任务。UI 仅用于启动、停止和监控任务。
-
-## 中文版 UI 截图
-
-![仪表盘（中文）](ui/public/screenshots/dashboard_zh.png)
-![新建任务（中文）](ui/public/screenshots/jobs_new_zh.png)
-
-
-## 常见问题（FAQ）
-
-- 显存不足如何处理？
-  - 训练大型模型时，如遇显存限制，可在配置中开启低显存选项（例如 `low_vram: true`），或在 CPU 上量化部分模块以降低显存占用。
-- Windows 环境安装遇到困难？
-  - 建议优先确认 Python、CUDA 与驱动版本匹配；也可以考虑使用 WSL（Windows Subsystem for Linux）以获得更稳定的依赖环境。
-- UI 无法访问或接口报错？
-  - 请检查 Node.js 版本（≥18）、依赖是否安装完成（`npm install`）、以及开发服务器是否正常运行（`npm run dev`）。
-
-## 许可证
 
 本仓库遵循原项目的许可证政策（如有变更将于此处更新）。请在商用或分发前确认模型及数据集的独立许可证要求。
